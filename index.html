@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poster Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="hero">
+        <span class="pill">✨ viral-ready prints</span>
+        <h1>Turn your vibe into a statement poster.</h1>
+        <p>
+          Drop your fave image, remix the style, and checkout in seconds. Clean aesthetic,
+          premium quality, main-character energy.
+        </p>
+      </header>
+
+      <section class="card layout">
+        <div class="panel preview-panel">
+          <h2>1) Upload your masterpiece</h2>
+          <label class="file-input" for="imageUpload">
+            <input id="imageUpload" type="file" accept="image/*" />
+            <span>📸 Add image</span>
+          </label>
+          <small class="hint">Best results: PNG, JPG, WEBP • high resolution recommended.</small>
+
+          <div class="preview-wrap">
+            <img
+              id="imagePreview"
+              alt="Poster preview"
+              src="https://placehold.co/800x1000/1b1630/f2ddca?text=Your+Moody+Poster"
+            />
+          </div>
+
+          <div class="micro-copy">🔥 Trending now: dreamy gradients • chrome typography • retro grain</div>
+        </div>
+
+        <form id="orderForm" class="panel form-panel">
+          <h2>2) Customize your drop</h2>
+
+          <label>
+            Poster size
+            <select id="size" name="size" required>
+              <option value="small">Small (12 x 18 in) — $12</option>
+              <option value="medium" selected>Medium (18 x 24 in) — $20</option>
+              <option value="large">Large (24 x 36 in) — $32</option>
+            </select>
+          </label>
+
+          <label>
+            Paper finish
+            <select id="finish" name="finish" required>
+              <option value="matte" selected>Matte cloud-touch</option>
+              <option value="glossy">Glossy shine (+$3 each)</option>
+            </select>
+          </label>
+
+          <label>
+            Quantity
+            <input id="quantity" type="number" min="1" max="50" value="1" required />
+          </label>
+
+          <label>
+            Name
+            <input id="name" type="text" placeholder="Jordan Lee" required />
+          </label>
+
+          <label>
+            Email
+            <input id="email" type="email" placeholder="you@inbox.com" required />
+          </label>
+
+          <button type="submit">🚀 Place My Poster Order</button>
+
+          <p id="price" class="price" aria-live="polite">Total: $20.00</p>
+          <p id="message" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
